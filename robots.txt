@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jinghang-global-supply-chain.pages.dev/sitemap.xml
+Sitemap: https://jinghangsc.com/sitemap.xml

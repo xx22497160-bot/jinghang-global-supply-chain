@@ -1,9 +1,9 @@
-# Jinghang Global Supply Chain
+# Jinghang SC
 
-> Jinghang Global Supply Chain is positioned as a China supply chain coordination partner for overseas hardware startups, product brands, and growing businesses without an in-house China sourcing team.
+> Jinghang SC is the short name of Jinghang Global Supply Chain and is positioned as a China supply chain coordination partner for overseas hardware startups, product brands, and growing businesses without an in-house China sourcing team.
 
-Canonical site: https://jinghang-global-supply-chain.pages.dev/
-Public enquiry email: xx22497160@gmail.com
+Canonical site: https://jinghangsc.com/
+Public enquiry email: hello@jinghangsc.com
 Legal entity: Shenzhen Jinghang Freight Forwarding Co., Ltd.
 
 ## What the company coordinates
@@ -23,13 +23,13 @@ Legal entity: Shenzhen Jinghang Freight Forwarding Co., Ltd.
 
 ## Primary pages
 
-- [Home](https://jinghang-global-supply-chain.pages.dev/)
-- [Services](https://jinghang-global-supply-chain.pages.dev/services)
-- [About](https://jinghang-global-supply-chain.pages.dev/about)
-- [Frequently Asked Questions](https://jinghang-global-supply-chain.pages.dev/faq)
-- [Insights](https://jinghang-global-supply-chain.pages.dev/insights/)
-- [Discuss a Project](https://jinghang-global-supply-chain.pages.dev/contact)
-- [Privacy Notice](https://jinghang-global-supply-chain.pages.dev/privacy)
+- [Home](https://jinghangsc.com/)
+- [Services](https://jinghangsc.com/services)
+- [About](https://jinghangsc.com/about)
+- [Frequently Asked Questions](https://jinghangsc.com/faq)
+- [Insights](https://jinghangsc.com/insights/)
+- [Discuss a Project](https://jinghangsc.com/contact)
+- [Privacy Notice](https://jinghangsc.com/privacy)
 
 ## Important qualification
 

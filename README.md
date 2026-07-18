@@ -1,12 +1,12 @@
-# Jinghang Global Supply Chain Website
+# Jinghang SC Website
 
-Static English website for Jinghang Global Supply Chain, positioned as a China supply chain coordination partner for international hardware startups, brands, and growing businesses.
+Static English website for Jinghang SC, the short name of Jinghang Global Supply Chain, positioned as a China supply chain coordination partner for international hardware startups, brands, and growing businesses.
 
 Phase 2 adds a 60-question FAQ knowledge base, structured entity/page/service data, a practical Insights library, conversion-path improvements, and expanded technical SEO validation without changing the core visual system.
 
 ## Live Site
 
-https://jinghang-global-supply-chain.pages.dev/
+https://jinghangsc.com/
 
 ## Technology
 
