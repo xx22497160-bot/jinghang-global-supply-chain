@@ -12,7 +12,8 @@ https://jinghangsc.com/
 
 - Semantic HTML
 - One shared CSS file
-- No JavaScript, package manager, framework, or build command
+- One small same-origin JavaScript file that prepares the Contact-page email draft in the visitor's browser
+- No package manager, framework, tracking script, or build command
 - GitHub-connected Cloudflare Pages deployment
 
 ## Cloudflare Pages Settings

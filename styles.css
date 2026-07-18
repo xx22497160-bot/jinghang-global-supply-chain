@@ -1680,6 +1680,35 @@ ol {
   cursor: pointer;
 }
 
+.submit-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+.form-status {
+  min-height: 1.2em;
+  margin: 0.8rem 0 0;
+  color: var(--teal);
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status-error {
+  color: #8a3f18;
+}
+
+.form-note-alert {
+  padding: 0.8rem;
+  color: #6e3518;
+  background: var(--warning-bg);
+  border: 1px solid #f0d7c6;
+  border-radius: 8px;
+}
+
 .legal-copy h2 {
   margin-top: 2.8rem;
   font-size: clamp(1.55rem, 3vw, 2.2rem);
