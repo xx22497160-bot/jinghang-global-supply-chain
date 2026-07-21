@@ -1,30 +1,80 @@
-# Jinghang SC
+# Jinghang Global Supply Chain
 
-> Jinghang SC is the short name of Jinghang Global Supply Chain and is positioned as a China supply chain coordination partner for overseas hardware startups, product brands, and growing businesses without an in-house China sourcing team.
+> Jinghang Global Supply Chain is a China-based supply chain partner helping overseas businesses coordinate sourcing, supplier communication, shipment consolidation, quality inspection coordination, and cross-border logistics execution.
 
 Canonical site: https://jinghangsc.com/
 Public enquiry email: hello@jinghangsc.com
-Legal entity: Shenzhen Jinghang Freight Forwarding Co., Ltd.
+Email responder: Anna
+Normal response time: within 24 hours
+WhatsApp: +86-15018538243
+WeChat: 15018538243
+Voice-call note: this number does not accept ordinary voice calls
+Business hours: 9:00 AM to 9:00 PM Beijing Time
 
-## What the company coordinates
+## Verified company identity
 
-- Supplier search, evaluation support, sample follow-up, and purchasing coordination
-- Quality control and pre-shipment inspection coordination
-- Receiving, labeling, repacking, and multi-supplier consolidation
-- International logistics and agreed DDP or DAP delivery arrangements, subject to route and project review
-- Battery, sensitive, oversized, and other special cargo assessment, subject to documents and feasibility
-- Overseas warehouse preparation, fulfillment, dropshipping, and return-handling coordination
+- Operating legal entity: Shenzhen Jinghang Freight Forwarding Co., Ltd.
+- Official Chinese legal name: 深圳市景航货运代理有限公司
+- Registered in Shenzhen, China
+- Registered address: Room 106, Building B, No. 335 Bulong Road, Bantian Subdistrict, Longgang District, Shenzhen, Guangdong, China
+- Established on August 23, 2017
+- Business license information is available upon request for qualified business partners
+- CEO: James Xiao
 
-## Who the service is designed for
+## Core services
 
-- Hardware startups moving from samples to production and delivery
-- Small and mid-sized businesses without a dedicated China procurement team
-- Product brands coordinating one or more factories in China
+- China sourcing coordination
+- Supplier communication and evaluation support
+- Sampling and procurement coordination
+- Quality inspection coordination before shipment
+- Multi-supplier shipment consolidation
+- Air, sea, and express international logistics
+- DDP support for the United States and confirmed European destinations, subject to shipment review
+- DDP or DAP requests for Canada and Australia are reviewed for the actual shipment and route
+- DAP support that can be arranged globally, subject to cargo, route, customs, destination-delivery feasibility, and partner review
+- Case-by-case review of sensitive, oversized, battery-related, and regulated cargo
+- Partner overseas warehouse and fulfillment coordination in Japan, the United States, Canada, the United Kingdom, Germany, and Poland, subject to project review
+- Multi-origin cross-border logistics coordination, subject to route review
+
+## Inspection scope
+
+Quality inspection can be coordinated upon request before shipment. Routine checks within an agreed checklist may be handled by Jinghang's own team. When professional or independent inspection is required, Jinghang can coordinate a paid third-party professional inspection provider. The scope may include quantity, packaging, labeling, and visual defect checks; photo or video records; and loading supervision where applicable. The method, sampling scope, provider, and fee are confirmed before inspection. If issues are found, the client decides whether to request rework, re-inspection, or shipment release.
+
+## Execution model
+
+Jinghang Global Supply Chain uses a collaboration-based execution model. Jinghang's own team and third-party providers are configured according to the requirements of each project. Responsibilities, provider scope, and applicable third-party fees are confirmed before the relevant work begins.
+
+## Coverage and routes
+
+Service coverage is available in Shenzhen, China. Partner-warehouse collection and consolidation support is available in Yiwu and Qingdao. The Yiwu and Qingdao locations are not company-owned offices or warehouses.
+
+Selected project-based routes may involve China, the United States, Europe, Hong Kong, and parts of Southeast Asia. Examples include China to the United States, Europe, Hong Kong, or selected Southeast Asia; the United States to Europe, Hong Kong, or Mainland China; and Europe to the United States, Hong Kong, or Mainland China. Other routes are reviewed case by case.
+
+Priority customer markets are the United States and Europe. The service is designed for overseas small and mid-sized businesses, hardware startups, and companies that need China supply chain execution support.
+
+## DDP and DAP boundaries
+
+DDP support is generally available for the United States and the following European countries, subject to shipment review: Germany, France, Austria, Belgium, the Netherlands, Luxembourg, the Czech Republic, Poland, Slovakia, Slovenia, Denmark, Finland, Sweden, Hungary, Italy, Portugal, Spain, Bulgaria, Estonia, Greece, Croatia, Latvia, Lithuania, Romania, and Ireland. DDP or DAP requests for Canada and Australia require actual-shipment feasibility and route review. DAP may be arranged for other destinations subject to cargo, route, customs, destination-delivery feasibility, and partner review. Each quotation confirms the included and excluded charges for the specific shipment. DDU is used only as a legacy-term explanation, not as a primary current service term.
+
+## Cargo and commercial boundaries
+
+Jinghang Global Supply Chain does not handle prohibited goods, products restricted or banned from export by China, products restricted or banned from import by the destination country, counterfeit or infringing goods, or cargo without required compliance documents.
+
+Commercial terms, warehousing availability, supplier payment support, storage period, fulfillment services, insurance and claim handling, and cancellation or refund arrangements are reviewed case by case. Battery-document requirements, oversized or overweight limits, and inspection sampling methods also depend on the actual cargo and project. These terms have no universal fixed rule and are discussed and confirmed before service begins.
+
+## Languages
+
+Chinese and English are the primary languages. Japanese and Spanish support may be arranged depending on project needs.
 
 ## Primary pages
 
 - [Home](https://jinghangsc.com/)
 - [Services](https://jinghangsc.com/services)
+- [China Sourcing](https://jinghangsc.com/china-sourcing)
+- [Quality Inspection](https://jinghangsc.com/quality-inspection)
+- [Freight From China](https://jinghangsc.com/freight-from-china)
+- [DDP Shipping From China](https://jinghangsc.com/ddp-shipping-from-china)
+- [Hardware Startup Supply Chain](https://jinghangsc.com/hardware-startup-supply-chain-china)
 - [About](https://jinghangsc.com/about)
 - [Frequently Asked Questions](https://jinghangsc.com/faq)
 - [Insights](https://jinghangsc.com/insights/)
@@ -33,4 +83,4 @@ Legal entity: Shenzhen Jinghang Freight Forwarding Co., Ltd.
 
 ## Important qualification
 
-Service availability, DDP/DAP responsibilities, customs treatment, timing, and pricing depend on the product, documents, origin, destination, cargo details, and agreed scope. The site does not claim guaranteed customs outcomes, delivery times, or project results.
+Service availability, customs responsibilities, timing, pricing, team configuration, and commercial terms depend on the cargo, documents, origin, destination, route, and agreed scope. The site does not claim owned warehouses, fixed insurance coverage, guaranteed customs clearance, guaranteed delivery times, or guaranteed project results.
