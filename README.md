@@ -55,4 +55,14 @@ The current release expects 16 HTML files, 15 indexable routes, exactly 27 verif
 
 ## Analytics Status
 
-No analytics or session-recording ID is currently embedded. Search Console, GA4, Microsoft Clarity, Bing Webmaster Tools, or Cloudflare Web Analytics must use real account-issued identifiers or account authorization, followed by privacy/CSP review and live verification.
+No analytics or session-recording ID is currently embedded. GA4, Microsoft Clarity, or Cloudflare Web Analytics must use real account-issued identifiers or account authorization, followed by privacy/CSP review and live verification.
+
+## Search Discovery Status
+
+- The Google Search Console URL-prefix property for `https://jinghangsc.com/` was verified on 2026-07-21 through `googlebdcd5011c88334e9.html`.
+- `sitemap.xml` was submitted successfully in Search Console and reported 15 discovered pages on 2026-07-21.
+- The home page and five specialist service URLs were submitted to Google's priority crawl queue after the release.
+- The Bing verification meta tag is present on the home page. Bing Webmaster Tools created the site entry, but its verification request returned a platform-side unexpected/fetch error; do not describe the property as verified until the portal confirms it.
+- `d20ec9908a240ebbdc5b5b295ea324b4.txt` is the root IndexNow key file. Keep it deployed if the key is used for future IndexNow notifications.
+
+Verification files and tags must remain in place to preserve ownership or protocol validation.
