@@ -1,8 +1,8 @@
-# Jinghang SC Website
+# Jinghang Global Supply Chain Website
 
-Static English website for Jinghang SC, the short name of Jinghang Global Supply Chain, positioned as a China supply chain coordination partner for international hardware startups, brands, and growing businesses.
+Static English website for Jinghang Global Supply Chain, positioned as a China-based supply chain partner for overseas businesses.
 
-Phase 2 adds a 60-question FAQ knowledge base, structured entity/page/service data, a practical Insights library, conversion-path improvements, and expanded technical SEO validation without changing the core visual system.
+The specialist-page release adds five focused service decision pages, a 27-question fact-controlled FAQ, structured entity and service data, a practical Insights library, conversion paths, and technical SEO validation without changing the core visual system.
 
 ## Live Site
 
@@ -27,6 +27,11 @@ https://jinghangsc.com/
 
 - `/`
 - `/services`
+- `/china-sourcing`
+- `/quality-inspection`
+- `/freight-from-china`
+- `/ddp-shipping-from-china`
+- `/hardware-startup-supply-chain-china`
 - `/about`
 - `/faq`
 - `/contact`
@@ -40,13 +45,13 @@ The `_headers`, `robots.txt`, `sitemap.xml`, and `llms.txt` files must remain in
 
 ## Validation
 
-From the local project root, run:
+From the AEO/GEO implementation workspace, run:
 
 ```bash
-"/Users/bang/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3" work/validate_site.py
+"/Users/bang/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3" work/validate_jinghang_site.py
 ```
 
-The Phase 2 release expects 11 HTML files, 10 indexable routes, at least 50 visible FAQs, exact visible/schema FAQ parity, all required Schema.org families, current CSP hashes, complete social metadata, and valid internal routes and anchors.
+The current release expects 16 HTML files, 15 indexable routes, exactly 27 verified visible FAQs with matching FAQPage entities, `WebPage`, `Service`, and `BreadcrumbList` schema on each specialist page, no schema `telephone` field, current CSP hashes, complete social metadata, and valid internal routes and anchors.
 
 ## Analytics Status
 
