@@ -152,29 +152,33 @@
         <div class="form-card">
           <p class="eyebrow">Project enquiry</p>
           <h2>Share the essential details.</h2>
-          <p class="form-intro">This static form prepares an email in your default mail app. If that does not open, email the same details directly to <a class="text-link" href="mailto:hello@jinghangsc.com">hello@jinghangsc.com</a>.</p>
+          <p class="form-intro">This secure form sends your project brief to our enquiry inbox for Anna to review. It does not create a website account or store the submission in a website database. If the form is unavailable, email the same details directly to <a class="text-link" href="mailto:hello@jinghangsc.com">hello@jinghangsc.com</a>.</p>
 
-          <form id="project-enquiry-form" action="/contact" method="post" data-email-recipient="hello@jinghangsc.com">
+          <form id="project-enquiry-form" action="/api/contact" method="post" aria-describedby="privacy-note">
+            <div class="form-trap" aria-hidden="true">
+              <label for="website-url">Leave this field blank</label>
+              <input id="website-url" name="website_url" type="text" tabindex="-1" autocomplete="off">
+            </div>
             <div class="form-grid">
               <div class="field">
                 <label for="name">Full name *</label>
-                <input id="name" name="full_name" type="text" autocomplete="name" required>
+                <input id="name" name="full_name" type="text" autocomplete="name" minlength="2" maxlength="100" required>
               </div>
               <div class="field">
                 <label for="company">Company name</label>
-                <input id="company" name="company_name" type="text" autocomplete="organization">
+                <input id="company" name="company_name" type="text" autocomplete="organization" maxlength="160">
               </div>
               <div class="field">
                 <label for="email">Work email *</label>
-                <input id="email" name="work_email" type="email" autocomplete="email" required>
+                <input id="email" name="work_email" type="email" autocomplete="email" maxlength="254" required>
               </div>
               <div class="field">
                 <label for="country">Country / time zone</label>
-                <input id="country" name="country_and_time_zone" type="text" autocomplete="country-name">
+                <input id="country" name="country_and_time_zone" type="text" autocomplete="country-name" maxlength="120">
               </div>
               <div class="field">
                 <label for="website">Company website</label>
-                <input id="website" name="company_website" type="url" inputmode="url" placeholder="https://">
+                <input id="website" name="company_website" type="url" inputmode="url" maxlength="500" placeholder="https://">
               </div>
               <div class="field">
                 <label for="stage">Current project stage *</label>
@@ -190,23 +194,23 @@
               </div>
               <div class="field field-full">
                 <label for="product">Product and project details *</label>
-                <textarea id="product" name="product_and_project_details" required placeholder="What is the product? What will it be used for? What stage are you at, and what problem do you want us to solve?"></textarea>
+                <textarea id="product" name="product_and_project_details" minlength="20" maxlength="5000" required placeholder="What is the product? What will it be used for? What stage are you at, and what problem do you want us to solve?"></textarea>
               </div>
               <div class="field field-full">
                 <label for="supplier">Suppliers, quantity, and cargo details</label>
-                <textarea id="supplier" name="supplier_quantity_and_cargo" placeholder="Share what you know so far: supplier cities, number of suppliers, quantity, carton count, packed dimensions, gross weight, cargo value, and available documents."></textarea>
+                <textarea id="supplier" name="supplier_quantity_and_cargo" maxlength="4000" placeholder="Share what you know so far: supplier cities, number of suppliers, quantity, carton count, packed dimensions, gross weight, cargo value, and available documents."></textarea>
               </div>
               <div class="field">
                 <label for="origin">Origin city</label>
-                <input id="origin" name="origin_city" type="text" placeholder="For example, Shenzhen">
+                <input id="origin" name="origin_city" type="text" maxlength="160" placeholder="For example, Shenzhen">
               </div>
               <div class="field">
                 <label for="destination">Destination city and postal code</label>
-                <input id="destination" name="destination" type="text">
+                <input id="destination" name="destination" type="text" maxlength="240">
               </div>
               <div class="field field-full">
                 <label for="cargo">Sensitive or special cargo details</label>
-                <textarea id="cargo" name="sensitive_cargo_details" placeholder="Describe any sensitive, oversized, battery-related, regulated, or otherwise non-standard cargo characteristics."></textarea>
+                <textarea id="cargo" name="sensitive_cargo_details" maxlength="4000" placeholder="Describe any sensitive, oversized, battery-related, regulated, or otherwise non-standard cargo characteristics."></textarea>
               </div>
 
               <fieldset class="choice-field field-full">
@@ -230,8 +234,13 @@
               </div>
               <div class="field">
                 <label for="contact">WhatsApp / WeChat / other messaging contact</label>
-                <input id="contact" name="messaging_contact" type="text" autocomplete="off">
+                <input id="contact" name="messaging_contact" type="text" autocomplete="off" maxlength="200">
               </div>
+            </div>
+
+            <div class="turnstile-field">
+              <span class="turnstile-label">Security check *</span>
+              <div id="turnstile-container" aria-live="polite"></div>
             </div>
 
             <label class="consent">
@@ -239,12 +248,12 @@
               <span>I confirm that the information provided is accurate to the best of my knowledge and may be used to review and respond to this enquiry.</span>
             </label>
             <p id="privacy-note" class="form-note">Read how enquiry information is handled in the <a class="text-link" href="/privacy">Privacy Notice</a>.</p>
-            <button class="button button-dark submit-button" type="submit" disabled>Prepare Email Enquiry</button>
+            <button class="button button-dark submit-button" type="submit" disabled>Send Project Enquiry</button>
             <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
             <noscript>
-              <p class="form-note form-note-alert">Email preparation requires JavaScript. Please send the project details directly to <a class="text-link" href="mailto:hello@jinghangsc.com">hello@jinghangsc.com</a>.</p>
+              <p class="form-note form-note-alert">The secure form requires JavaScript. Please send the project details directly to <a class="text-link" href="mailto:hello@jinghangsc.com">hello@jinghangsc.com</a>.</p>
             </noscript>
-            <p class="form-note">Your details stay in this browser until your email application opens. The website does not submit or store the form entries. Review the prepared message, attach any photos, specifications, or packing lists, and choose Send in your email application.</p>
+            <p class="form-note">The submitted details are sent over HTTPS and delivered to Jinghang by email. The website does not create a separate form-submission database. This form does not accept attachments; after we reply, you can send photos, specifications, packing lists, or other files by email.</p>
           </form>
         </div>
       </div>

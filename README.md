@@ -12,7 +12,9 @@ https://jinghangsc.com/
 
 - Semantic HTML
 - One shared CSS file
-- One small same-origin JavaScript file that prepares the Contact-page email draft in the visitor's browser
+- One small same-origin JavaScript file for the secure Contact-page submission flow
+- Cloudflare Pages Functions for server-side validation and Turnstile verification
+- A private Cloudflare service binding to the `jinghang-contact-mailer` Worker
 - No package manager, framework, tracking script, or build command
 - GitHub-connected Cloudflare Pages deployment
 
@@ -66,3 +68,25 @@ No analytics or session-recording ID is currently embedded. GA4, Microsoft Clari
 - `d20ec9908a240ebbdc5b5b295ea324b4.txt` is the root IndexNow key file. Keep it deployed if the key is used for future IndexNow notifications.
 
 Verification files and tags must remain in place to preserve ownership or protocol validation.
+
+## Contact Form Runtime
+
+The form at `/contact` sends a same-origin JSON request to `/api/contact`. The Pages Function validates every field, verifies the single-use Turnstile token on the server, and then calls a private mailer Worker through the `CONTACT_MAILER` service binding. No form-submission database or visitor auto-reply is used.
+
+Required Pages production settings:
+
+- Variable `TURNSTILE_SITE_KEY`: public site key for the managed `jinghangsc.com` Turnstile widget
+- Encrypted secret `TURNSTILE_SECRET_KEY`: matching server-side secret
+- Service binding `CONTACT_MAILER`: target `jinghang-contact-mailer`
+
+Required mailer Worker settings:
+
+- Worker name `jinghang-contact-mailer`
+- No public route and `workers.dev` disabled
+- `send_email` binding `CONTACT_EMAIL`
+- Encrypted Worker secret `CONTACT_DESTINATION`, set to the verified destination that receives `hello@jinghangsc.com`
+- Fixed technical sender `website@jinghangsc.com`; visitor work email is used only as `Reply-To`
+
+The mailer Worker must be maintained and deployed separately from the Pages static-output directory. Its destination secret is configured only in Cloudflare and must never be committed.
+
+Deployment is incomplete until a real production enquiry arrives in Anna's inbox and Reply opens the visitor's address. Never add production secrets to Git or browser-side JavaScript.

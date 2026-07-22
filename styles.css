@@ -1658,6 +1658,32 @@ ol {
   font-size: 0.78rem;
 }
 
+.form-trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.turnstile-field {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 1.25rem;
+}
+
+.turnstile-label {
+  color: #394a54;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+#turnstile-container {
+  min-height: 65px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .consent {
   display: flex;
   gap: 0.7rem;
@@ -1685,6 +1711,10 @@ ol {
   opacity: 0.62;
 }
 
+form[aria-busy="true"] .submit-button {
+  cursor: wait;
+}
+
 .form-status {
   min-height: 1.2em;
   margin: 0.8rem 0 0;
@@ -1699,6 +1729,10 @@ ol {
 
 .form-status-error {
   color: #8a3f18;
+}
+
+.form-status-success {
+  color: #0c6f63;
 }
 
 .form-note-alert {
@@ -2158,4 +2192,3 @@ ol {
     transition-duration: 0.01ms !important;
   }
 }
-
