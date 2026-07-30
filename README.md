@@ -15,14 +15,15 @@ https://jinghangsc.com/
 - One small same-origin JavaScript file for the secure Contact-page submission flow
 - Cloudflare Pages Functions for server-side validation and Turnstile verification
 - A private Cloudflare service binding to the `jinghang-contact-mailer` Worker
-- No package manager, framework, tracking script, or build command
+- No package manager, framework, or tracking script
+- A standard-library Python build step that copies only approved public files to `dist/`
 - GitHub-connected Cloudflare Pages deployment
 
 ## Cloudflare Pages Settings
 
 - Framework preset: None
-- Build command: leave blank
-- Build output directory: `/`
+- Build command: `python3 scripts/build_site.py`
+- Build output directory: `dist`
 - Production branch: `main`
 
 ## Main Routes
@@ -43,21 +44,24 @@ https://jinghangsc.com/
 - `/insights/china-supplier-evaluation-checklist`
 - `/insights/ddp-vs-dap-shipping-from-china`
 
-The `_headers`, `robots.txt`, `sitemap.xml`, and `llms.txt` files must remain in the repository root so Cloudflare Pages can deploy them with the site.
+The `_headers`, `robots.txt`, `sitemap.xml`, and `llms.txt` source files remain in the repository root and are copied to `dist/` by the allowlist build. The `functions/` directory remains at the Pages project root, outside the static output directory, as required for Pages Functions.
 
 ## Validation
 
-From the AEO/GEO implementation workspace, run:
+From the repository root, run the public build and complete local-only validation:
 
 ```bash
-"/Users/bang/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3" work/validate_jinghang_site.py
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_site.py
+PYTHONDONTWRITEBYTECODE=1 python3 seo/scripts/seo_automation.py daily --local-only --strict
 ```
 
-The current release expects 16 HTML files, 15 indexable routes, exactly 27 verified visible FAQs with matching FAQPage entities, `WebPage`, `Service`, and `BreadcrumbList` schema on each specialist page, no schema `telephone` field, current CSP hashes, complete social metadata, and valid internal routes and anchors.
+The current release expects the allowlisted `dist/` output to contain no internal SEO reports, data, scripts, GitHub configuration, memory, README, or Functions source. Source validation expects 16 public-template HTML files, 15 canonical indexable routes, exactly 27 verified visible FAQs with matching FAQPage entities, valid JSON-LD, current CSP hashes, complete social metadata, valid internal routes and assets, and no unverified public social-profile or messaging identifiers.
 
 ## Analytics Status
 
 No analytics or session-recording ID is currently embedded. GA4, Microsoft Clarity, or Cloudflare Web Analytics must use real account-issued identifiers or account authorization, followed by privacy/CSP review and live verification.
+
+The 2026-07-29 production PageSpeed audit observed an attempted Cloudflare Web Analytics beacon injection. The current Content Security Policy blocked it, and it is not treated as an approved measurement source. Disable that injection in the Cloudflare dashboard unless analytics is explicitly approved together with the required Privacy Notice and CSP changes.
 
 ## Search Discovery Status
 
