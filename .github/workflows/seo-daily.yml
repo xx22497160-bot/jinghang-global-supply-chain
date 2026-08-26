@@ -1,0 +1,64 @@
+name: SEO daily health monitor
+
+on:
+  schedule:
+    # 01:30 UTC = 09:30 China Standard Time (UTC+8).
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-daily-health-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out the website source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Restore the previous issue state
+        uses: actions/cache/restore@v4
+        with:
+          path: seo/state/daily-latest.json
+          key: seo-daily-state-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            seo-daily-state-${{ runner.os }}-
+
+      - name: Run the complete read-only monitor
+        id: seo_monitor
+        continue-on-error: true
+        run: python seo/scripts/seo_automation.py daily --strict
+
+      - name: Save the latest issue state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: seo/state/daily-latest.json
+          key: seo-daily-state-${{ runner.os }}-${{ github.run_id }}
+
+      - name: Upload the daily report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-daily-${{ github.run_id }}
+          path: seo/reports/daily/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Preserve the monitor result
+        if: steps.seo_monitor.outcome == 'failure'
+        run: |
+          echo "The monitor completed all checks and recorded one or more errors."
+          exit 1

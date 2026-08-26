@@ -1,0 +1,40 @@
+name: SEO monthly report
+
+on:
+  schedule:
+    # Day 1 at 01:30 UTC = day 1 at 09:30 China Standard Time (UTC+8).
+    - cron: "30 1 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-monthly-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the website source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate the monthly report only
+        run: python seo/scripts/seo_automation.py monthly
+
+      - name: Upload the monthly report
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-monthly-${{ github.run_id }}
+          path: seo/reports/monthly/
+          if-no-files-found: error
+          retention-days: 180

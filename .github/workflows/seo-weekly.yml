@@ -1,0 +1,40 @@
+name: SEO weekly review
+
+on:
+  schedule:
+    # Monday 01:30 UTC = Monday 09:30 China Standard Time (UTC+8).
+    - cron: "30 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-weekly-review
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the website source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate recommendations without editing pages
+        run: python seo/scripts/seo_automation.py weekly
+
+      - name: Upload the weekly report
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-weekly-${{ github.run_id }}
+          path: seo/reports/weekly/
+          if-no-files-found: error
+          retention-days: 90
